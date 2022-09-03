@@ -87,13 +87,14 @@ function Mainlist() {
     const currentTickers = useSelector(({tickers}) => tickers);
     const [hideTop, setHideTop] = useState(false);
     const [deleteArray, setDeleteArray] = useState([]);
-    let actualiArrayTickers = [...currentTickers];
 
     window.onload = function() {
         dispatch(tickerLoad())
     };
 
     const giveArrayAfterDeleted = () => {
+        
+        let actualiArrayTickers = [...currentTickers];
 
         deleteArray.length >= 1 && 
             deleteArray.forEach(elem => {
