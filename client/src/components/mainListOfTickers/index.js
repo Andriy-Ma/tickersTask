@@ -1,14 +1,16 @@
 import React, {useState} from 'react';
 import { useSelector, useDispatch } from "react-redux";
+
 import { makeStyles } from '@mui/styles';
 import { Box, Typography, Divider } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
-import {tickerLoad} from '../../redux/action';
-import TopOfList from './topOfList';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
+
+import {tickerLoad} from '../../redux/action';
+import TopOfList from './topOfList';
 
 const useStyles = makeStyles(() => ({
     mainListWrap: {
@@ -93,7 +95,7 @@ function Mainlist() {
     };
 
     const giveArrayAfterDeleted = () => {
-        
+
         let actualiArrayTickers = [...currentTickers];
 
         deleteArray.length >= 1 && 
